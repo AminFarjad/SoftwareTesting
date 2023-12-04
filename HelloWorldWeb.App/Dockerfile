@@ -7,7 +7,7 @@ ENV ASPNETCORE_URLS=http://+:3000
 FROM mcr.microsoft.com/dotnet/sdk:8.0-nanoserver-1809 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["HelloWorldWeb.App/HelloWorldWeb.App.csproj", "./"]
+COPY ["../HelloWorldWeb.App/HelloWorldWeb.App.csproj", "./"]
 RUN dotnet restore "HelloWorldWeb.App.csproj"
 COPY . .
 WORKDIR "/src/HelloWorldWeb.App"
